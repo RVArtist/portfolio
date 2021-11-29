@@ -1,0 +1,172 @@
+* {
+    margin: 10px $primary-color;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: break-all;
+    word-break: break-word;
+}
+
+body {
+    background-image: url("../img/me.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.8;
+  }
+
+@mixin flexCenter($justify)
+ {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+
+}
+@mixin flexFlow($directionWrap)
+{
+    flex-flow: $directionWrap;
+}
+
+@mixin headerNavStyle{
+    min-height: 10vh;
+    background-color: #855BCA;
+    border: 1px solid black;
+    nav{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        @include flexCenter(space-around);
+        a:hover{
+            color: red;
+        }
+    }
+    h1{
+        padding: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: italic;
+        @include flexCenter(center);
+    }
+}
+
+@mixin landing{
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    height: 80vh;
+    background-color: $primary-color;
+    display: block;
+    overflow: auto;
+}
+
+@mixin sectionBox{
+    height:auto;
+    font-size: 1.25em;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: #855BCA;
+    h3{
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+.navHeader{
+    @include headerNavStyle();
+}
+
+#footer{
+    min-height: 10vh;
+    background-color: #855BCA;
+    border: 1px solid black;
+    font-size: 1.25em;
+    margin-top: 10px $primary-color;
+    a:hover{
+        color: red;
+    }
+}
+
+.landing{
+    @include landing();
+}
+
+.intro{
+    @include sectionBox();
+    @include flexCenter(center);
+}
+
+.skills{
+    @include sectionBox();
+    ol{
+        @include flexCenter(center);
+        align-content: flex-start;
+        @include flexFlow(column nowrap);
+    }
+}
+
+.projects{
+    @include sectionBox();
+    ol{
+        @include flexCenter(center);
+        @include flexFlow(column nowrap);
+    }
+}
+
+.academics{
+    @include sectionBox();
+    ol{
+        @include flexCenter(center);
+        @include flexFlow(column nowrap);
+    }
+}
+
+.blogs{
+    @include sectionBox();
+    ol{
+        @include flexCenter(center);
+        @include flexFlow(column nowrap);
+    }
+}
+.blogs{
+    a:hover{
+        color: red;
+    }
+}
+
+/*! Styles for different screen sizes*/
+@mixin listStyle{
+    @include flexCenter(space-evenly);
+    @include flexFlow(row wrap);
+    gap: 5Px;
+    overflow-x: auto;
+    li{
+        padding-right: 25px;
+    }
+}
+@media screen and (min-width:600Px)
+{
+    .skills{
+        ol{
+            @include listStyle();
+        }
+    }
+
+    .projects > ol{
+        @include listStyle();
+    }
+
+    .academics > ol{
+        @include listStyle();
+    }
+    .blogs > ol{
+        @include listStyle();
+    }
+    #footer{
+        @include flexCenter(space-evenly);
+        @include flexFlow(row wrap);
+    }
+}
+
+@media screen and (max-width:500Px)
+{
+    .navHeader > nav{
+        flex-direction: column;
+    }
+}

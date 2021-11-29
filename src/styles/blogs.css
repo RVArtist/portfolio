@@ -1,0 +1,65 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+.blogHeader {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: #4281CB;
+  border: 2px solid black;
+}
+
+.leftColumn {
+  float: left;
+  width: 75%;
+  border: 2px solid black;
+}
+
+.rightColumn {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+  border: 2px solid black;
+}
+
+.postDescription {
+  background-color: #4281CB;
+  width: auto;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.card {
+  background-color: #4281CB;
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Responsive*/
+@media screen and (max-width: 600px) {
+  .leftColumn, .rightColumn {
+    width: 100%;
+    padding: 0;
+  }
+  .card > img {
+    width: 100%;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=blogs.css.map */

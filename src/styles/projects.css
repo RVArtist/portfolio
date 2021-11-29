@@ -1,0 +1,16 @@
+.gridProjects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(auto, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(auto, auto));
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  margin: 5px;
+  background-color: #A787B6;
+}
+
+.gridProjects > div {
+  border: 2px solid black;
+}
+/*# sourceMappingURL=projects.css.map */

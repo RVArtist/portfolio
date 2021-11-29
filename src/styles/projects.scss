@@ -1,0 +1,12 @@
+.gridProjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, auto));
+    grid-auto-rows: minmax(300px, auto);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    margin: 5px;
+    background-color: #A787B6;
+}
+.gridProjects > div{
+    border: 2px solid black;
+}

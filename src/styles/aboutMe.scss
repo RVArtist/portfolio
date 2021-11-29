@@ -1,0 +1,32 @@
+.identityContainer{
+    @include flexCenter(center);
+   @include flexFlow(column);
+
+  /* .identity{
+        @include flexCenter(center);
+        @include flexFlow(column);
+   }*/
+   background-color: $primary-color;
+}
+
+.identity{
+    width: 100%;
+    background-color: DodgerBlue;
+    border: 2px solid black;
+    @include flexCenter(center);
+    @include flexFlow(column);
+}
+
+
+@media screen and (min-width: 900px)
+{
+    .identity > ul{
+        @include flexCenter(center);
+        @include flexFlow(row wrap);
+        li{
+            padding: 20px;
+        }
+    }
+}
+
+
