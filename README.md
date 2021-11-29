@@ -1,6 +1,6 @@
 # Portfolio website
 
-[Published portfolio website link](https://github.com/RVArtist/portfolio.git)
+[Published portfolio website link](https://naughty-swartz-e6e6cb.netlify.app/)
 
 [GitHub repo link](https://github.com/RVArtist/portfolio.git)
 
@@ -43,6 +43,7 @@ Portfolio website ia my portfolio which includes the below pages.
 - Saas
 - Links
 - Typography
+- SRI
 
 ### Sitemap
 
